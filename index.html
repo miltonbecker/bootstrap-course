@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Playing with Bootstrap</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="node_modules/highlightjs/styles/github.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar menu -->
+    <div class="navbar navbar-default navbar-fixed-top transparent">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    Bootstrap <span class="class-name">Classes</span>
+                </a>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+                <li class="active">
+                    <a href="#" data-toggle="dropdown">
+                        Basics 
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="active">
+                            <a href="#containers" data-toggle="collapse">Containers</a>
+                        </li>
+                        <li>
+                            <a href="#grids" data-toggle="collapse">Grids</a>
+                        </li>
+                        <li>
+                            <a href="#typography" data-toggle="collapse">Typography</a>
+                        </li>
+                        <li>
+                            <a href="#buttons" data-toggle="collapse">Buttons, Wells and Panels</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-toggle="dropdown">
+                        Advanced 
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#navigation" data-toggle="collapse">Navigation</a>
+                        </li>
+                        <li>
+                            <a href="#behavior" data-toggle="collapse">Behavior and Collapse</a>
+                        </li>
+                        <li>
+                            <a href="#dropdown" data-toggle="collapse">Dropdown</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#helper" data-toggle="collapse">Helper Classes</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://getbootstrap.com">
+                                <i class="glyphicon glyphicon-globe"></i> 
+                                Official Bootstrap Website
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://startbootstrap.com">
+                                <i class="glyphicon glyphicon-globe"></i> 
+                                A Bootstrap Theme Website
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-info navbar-btn">Show All</button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="containers" class="content-item collapse in">
+        <div class="container">
+            <h2>Containers</h2>
+
+            <h3>container</h3>
+
+            <div class="well">
+                <p>Some margins. Content more centered in the screen.</p>
+                <p>Use this class in <code class="tag">div</code> elements.</p>
+            </div>
+            <p class="lorem"></p>
+        </div>
+
+        <div class="container-fluid">
+            <h3>container-fluid</h3>
+            <div class="well">
+                <p>Same as container but with smaller margins. Content uses the whole screen.
+                </p>
+                <p>Use this class in <code class="tag">div</code> elements.</p>
+            </div>
+            <p class="lorem"></p>
+        </div>
+    </div>
+
+    <div id="grids" class="content-item container collapse">
+        <h2>Grids</h2>
+
+        <h3>col-xx-*</h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr class="info">
+                            <th>Grid Size</th>
+                            <th>Grid Class</th>
+                            <th>Offset Class</th>
+                            <th>Screen Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Extra Small (Phones)</td>
+                            <td>col-xs-*</td>
+                            <td>col-xs-offset-*</td>
+                            <td>0px+</td>
+                        </tr>
+                        <tr>
+                            <td>Small (Tablets)</td>
+                            <td>col-sm-*</td>
+                            <td>col-sm-offset-*</td>
+                            <td>768px+</td>
+                        </tr>
+                        <tr>
+                            <td>Medium (Laptops)</td>
+                            <td>col-md-*</td>
+                            <td>col-md-offset-*</td>
+                            <td>992px+</td>
+                        </tr>
+                        <tr>
+                            <td>Large (TV's)</td>
+                            <td>col-lg-*</td>
+                            <td>col-lg-offset-*</td>
+                            <td>1200px+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="well">
+            <p>Bootstrap divides the screen in <b>12 columns</b>.</p>
+            <p>Use these classes in <code class="tag">div</code> elements.</p>
+            <p>The <b>*</b> can be used (instead of a number) to fill the existing space in the row.
+                <em>Except it behaves a little bit differently and occupies more space than expected, 
+                not sure why</em>.</p>
+            <p>Plus, wrap every 12-column elements group inside a
+                <code class="tag">div</code> with the <span class="em"><span class="class-name">row</span> class</span>.
+                This makes our code a lot easier to read and makes bootstrap expect a grid structure.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>col-md-6</h4>
+                <p class="lorem"></p>
+            </div>
+
+            <div class="col-md-6">
+                <h4>col-md-6</h4>
+                <p class="lorem"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h4>col-md-8</h4>
+                <p class="lorem"></p>
+            </div>
+
+            <div class="col-md-3 col-md-offset-1">
+                <h4>col-md-3 col-md-offset-1</h4>
+                <div class="well">
+                    <p>The <b>col-md-offset-1</b> adds a column of padding to the left.
+                    </p>
+                </div>
+                <p class="lorem"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-xs-6">
+                <h4>col-md-4 col-xs-6</h4>
+                <p class="lorem"></p>
+            </div>
+
+            <div class="col-md-4 col-xs-6">
+                <h4>col-md-4 col-xs-6</h4>
+                <p class="lorem"></p>
+            </div>
+
+            <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1">
+                <h4>col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1</h4>
+                <p class="lorem"></p>
+            </div>
+        </div>
+
+        <h3>hidden-xx</h3>
+        <div class="well">
+            <p><b>xx</b> can be: lg, md, sm or xs.</p>
+            <p>Hides the element from the specified screen size.</p>
+        </div>
+
+        <h4>hidden-sm hidden-xs</h4>
+        <p class="hidden-sm hidden-xs">You should see this paragraph in large and medium screens but not on small and extra small ones.</p>
+
+        <h3>visible-xx</h3>
+        <div class="well">
+            <p>xx can be lg, md, sm or xs.</p>
+            <p>Shows the element only on the specified screen size.</p>
+        </div>
+
+        <h4>visible-sm visible-xs</h4>
+        <p class="visible-sm visible-xs">You should see this paragraph only in small and extra small screens.</p>
+
+        <h3>clearfix</h3>
+        <div class="well">
+            <p>If you run into some floating elements problems in between screen changes, the clearfix class might help show
+                it correctly for the messed up screen size.
+            </p>
+        </div>
+    </div>
+
+    <div id="typography" class="content-item container collapse">
+        <h2>Typography</h2>
+
+        <h3>lead</h3>
+
+        <p class="lead">This is a lead paragraph.</p>
+        <p>This is a normal paragraph.</p>
+
+        <h3>text-center, text-justify, text-left, text-right, text-nowrap</h3>
+        <div class="well">
+            <p>It applies for the element and all of its children.</p>
+        </div>
+
+        <h4>text-center</h4>
+        <p class="text-center">You guessed it! This class centers the text!</p>
+
+        <h3>glyphicon (+) glyphicon-x</h3>
+        <div class="well">
+            <p>Icons!</p>
+            <p>It is usually used within an <code class="tag">i</code> tag.</p>
+            <p>You can customize the icons by overriding the glyphicon class in your own css file with properties like <em>font-size</em>                and
+                <em>color</em>.</p>
+            <p>Check all the available icons <a href="http://getbootstrap.com/components/">here</a>.</p>
+        </div>
+        <ul class="list-unstyled class-name">
+            <li>glyphicon glyphicon-briefcase <i class="glyphicon glyphicon-briefcase"></i></li>
+            <li>glyphicon glyphicon-play <i class="glyphicon glyphicon-play"></i></li>
+            <li>glyphicon glyphicon-phone <i class="glyphicon glyphicon-phone"></i></li>
+            <li>glyphicon glyphicon-phone-alt <i class="glyphicon glyphicon-phone-alt"></i></li>
+            <li>glyphicon glyphicon-envelope <i class="glyphicon glyphicon-envelope"></i></li>
+            <li>glyphicon glyphicon-calendar <i class="glyphicon glyphicon-calendar"></i></li>
+            <li>glyphicon glyphicon-comment <i class="glyphicon glyphicon-comment"></i></li>
+            <li>glyphicon glyphicon-globe <i class="glyphicon glyphicon-globe"></i></li>
+        </ul>
+
+        <p class="em">Normal list</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <h3>list-unstyled</h3>
+        <ul class="list-unstyled">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <h3>list-inline</h3>
+        <ul class="list-inline">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+    </div>
+
+    <div id="buttons" class="content-item container collapse">
+        <h2>Buttons, Wells and Panels</h2>
+
+        <p class="em">(normal button)</p>
+        <button type="button">Button</button>
+
+        <h3>btn (+) btn-default, btn-primary, btn-xs, btn-sm, btn-lg...</h3>
+        <ul class="list-inline">
+            <li><button type="button" class="btn">btn</button></li>
+            <li><button type="button" class="btn btn-lg">btn btn-lg</button></li>
+            <li><button type="button" class="btn btn-default">btn btn-default</button></li>
+            <li><button type="button" class="btn btn-primary">btn btn-primary</button></li>
+            <li><button type="button" class="btn btn-success">btn btn-success</button></li>
+            <li><button type="button" class="btn btn-info">btn btn-info</button></li>
+            <li><button type="button" class="btn btn-warning">btn btn-warning</button></li>
+            <li><button type="button" class="btn btn-danger">btn btn-danger</button></li>
+        </ul>
+
+        <h3>well (+) well-lg, well-sm</h3>
+        <div class="well">
+            <p>Hi there, this is well.</p>
+            <p>Cool, huh?</p>
+        </div>
+
+        <h4>well well-lg</h4>
+        <div class="well well-lg">
+            <p>Hi there, this is well well-lg - a well with <b>more padding</b>.</p>
+            <p>Cool, huh?</p>
+        </div>
+
+        <h4>well well-sm</h4>
+        <div class="well well-sm">
+            <p>Hi there, this is well well-sm - a well with <b>less padding</b>.</p>
+            <p>Cool, huh?</p>
+        </div>
+
+        <h3>panel (+) panel-default, panel-info, panel-success, panel-warning, panel-danger
+        </h3>
+        <div class="well">
+            <p>These are meant to be used within a parent <code class="tag">div</code>.</p>
+        </div>
+
+        <h3>panel-heading, panel-body, panel-footer</h3>
+        <div class="well">
+            <p>You've got to have at least one of these in a panel's child
+                <code class="tag">div</code>.</p>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">panel-heading for panel panel-default</div>
+            <div class="panel-body">panel-body</div>
+            <div class="panel-footer">panel-footer</div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">panel-heading for panel panel-info</div>
+            <div class="panel-body">panel-body</div>
+            <div class="panel-footer">panel-footer</div>
+        </div>
+
+        <div class="panel panel-success">
+            <div class="panel-heading">panel-heading for panel panel-success</div>
+            <div class="panel-body">panel-body</div>
+            <div class="panel-footer">panel-footer</div>
+        </div>
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">panel-heading for panel panel-warning</div>
+            <div class="panel-body">panel-body</div>
+            <div class="panel-footer">panel-footer</div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading">panel-heading for panel panel-danger</div>
+            <div class="panel-body">panel-body</div>
+            <div class="panel-footer">panel-footer</div>
+        </div>
+
+        <h3>panel-group</h3>
+        <div class="well">
+            <p>Wrap panels inside a <span class="cn">panel-group</span> to remove the bottom-margin of each panel.</p>
+        </div>
+    </div>
+
+    <div id="navigation" class="content-item collapse">
+        <div class="container">
+            <h2>Navigating Navigation</h2>
+            <div class="well">
+                <p>Bootstrap's navigation classes don't rely on grids. They rely on the content.
+                </p>
+                <p>So you should <b>not</b> use <span class="class-name">col-xx-*</span> classes in it.</p>
+            </div>
+
+            <h3>navbar (+) navbar-default, navbar-inverse, navbar-static-top, navbar-static-bottom, navbar-fixed-top, navbar-fixed-bottom</h3>
+            <div class="well">
+                <p>These are intended to be used in a <code class="tag">div</code>. They change the background color, border,
+                    padding...
+                </p>
+            </div>
+
+            <h3>navbar-brand</h3>
+            <div class="well">
+                <p>This is the class to be used on your brand name or the site logo.</p>
+            </div>
+
+            <h3>nav (+) navbar-nav, nav-pills, nav-tabs</h3>
+            <div class="well">
+                <p><span class="class-name">nav</span> is just the starting point class, just like with glyphicon and btn.</p>
+                <p><span class="class-name">navbar-nav</span> creates side by side navigation items.
+                </p>
+                <p><span class="class-name">nav-pill</span> is just like navbar-nav but with rounded corners.</p>
+                <p><span class="class-name">nav-tabs</span> creates, guess what, tabs.
+                </p>
+                <p><span class="class-name">navbar-right</span> aligns it to the right!
+                </p>
+            </div>
+
+            <p>The menu below has:</p>
+            <ul>
+                <li>A div with navbar and navbar-default (to change the background, add borders...)
+                </li>
+                <li>Another div with container (to center the links)</li>
+                <li>And then the menu items as you can see</li>
+            </ul>
+        </div>
+
+        <div class="navbar navbar-default">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">navbar-brand</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">nav navbar-nav navbar-right</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="behavior" class="content-item collapse">
+        <div class="container">
+            <h2>Adding Behavior</h2>
+            <div class="well">
+                <p>This is part of the Bootstrap JavaScript Library.</p>
+            </div>
+
+            <p class="em">Responsive navbar</p>
+
+            <div class="well">
+                <p>You have to check the code now.</p>
+                <p>The <span class="cn">navbar-header</span> is used to make sure the brand and the button are at the top whilst
+                    the links are shown below them on small screens.</p>
+                <p>The <span class="cn">collapse</span> hides the links. The
+                    <span class="cn">navbar-collapse</span> is used along with it so the links are only hidden when the screen
+                    is small.</p>
+                <p>The <span class="cn">navbar-toggle</span> makes the button only appear on small screens.</p>
+                <p>The <code>data-toggle</code> attribute indicates what class is going to be removed or added.</p>
+                <p>The <code>data-target</code> attribute indicates what element is getting its class toggled. It uses a standard
+                    css selector.</p>
+                <p>The <span class="cn">sr-only</span> says the content will only be shown for screen readers (visually impaired
+                    people).
+                </p>
+                <p>The <span class="cn">icon-bar</span> displays the horizontal line we see on menu/options buttons. We need
+                    3 of them, so we add 3.
+                </p>
+            </div>
+        </div>
+
+        <div class="navbar navbar-default">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">navbar-brand</a>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+                    <li><a href="#">nav navbar-nav navbar-right</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <p class="em">Collapse Plugin</p>
+
+            <div class="well">
+                To use the collapse plugin you need to set 2 attributes to an element:
+                <ul>
+                    <li>
+                        <code>data-toggle='<em>class</em>'</code>: indicates what class you're going to toggle. Usually,
+                        it is the <span class="cn">collapse</span> class
+                    </li>
+                    <li>
+                        <code>data-target='<em>selector</em>'</code>: indicate which element is going to have its class toggled.
+                        The selector is a standard css selector.
+                    </li>
+                    <li>
+                        <code>data-parent='<em>selector</em>'</code>: if you're within a group (say, <span class="cn">panel-group</span>),
+                        you can use this attribute (instead of <code>data-target</code>) to target the parent element and
+                        thus affect all that group's children.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown" class="content-item container collapse">
+        <h2>Dropdown</h2>
+
+        <p>The full code of the navbar you're seeing on this site.</p>
+
+        <pre>
+            <code id="dropdown-code" class="html"></code>
+        </pre>
+    </div>
+
+    <div id="helper" class="content-item container collapse">
+        <h2>Helper Classes</h2>
+
+        <ul class="class-name">
+            <li>active</li>
+            <li>pull-left</li>
+            <li>pull-right</li>
+            <li>info (blue text/background)</li>
+            <li>success (green text/background)</li>
+            <li>warning (yellow text/background)</li>
+            <li>danger (red text/background)</li>
+        </ul>
+    </div>
+
+    <!-- Bootstrap needs jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="node_modules/highlightjs/highlight.pack.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>

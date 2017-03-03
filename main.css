@@ -1,0 +1,56 @@
+h2 {
+    color: indianred;
+}
+
+h3, h4 {
+    color: darkslateblue;
+    font-family: "Source Code Pro", monospace;
+}
+
+body {
+    padding-top: 50px;
+}
+
+pre {
+    padding: 0px;
+}
+
+.transparent {
+    opacity: 0.95;
+}
+
+.nav>li:last-child {
+    margin-left: 10px;
+}
+
+.class-name, .cn {
+    color: darkslateblue;
+    font-family: "Source Code Pro", monospace;
+}
+
+.lorem {
+    color: #999;
+}
+
+.em {
+    font-size: 1.5em;
+}
+
+.tag::before {
+    content: '<';
+}
+
+.tag::after {
+    content: '>';
+}
+
+/* Overriding Bootstrap classes */
+#typography .glyphicon {
+    font-size: 20px;
+    color: #333;
+}
+
+.content-item.collapsing {
+    -webkit-transition: none;
+    transition: none;
+}

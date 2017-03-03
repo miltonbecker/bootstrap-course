@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-course",
+  "version": "1.0.0",
+  "description": "bootstrap-course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miltonbecker/bootstrap-course.git"
+  },
+  "author": "Milton Becker Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miltonbecker/bootstrap-course/issues"
+  },
+  "homepage": "https://github.com/miltonbecker/bootstrap-course#readme",
+  "devDependencies": {
+    "@types/bootstrap": "^3.3.32"
+  }
+}
